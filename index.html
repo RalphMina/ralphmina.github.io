@@ -1,46 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Ralph Mina Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Ralph Mina | E-Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    body { font-family: Arial; margin: 0; background: #f8fafc; color: #111; }
-    header { background: white; padding: 20px; border-bottom: 1px solid #ddd; }
-    section { padding: 40px; max-width: 900px; margin: auto; }
-    h1, h2 { margin-bottom: 10px; }
-    img { width: 100%; border-radius: 10px; margin: 20px 0; }
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .brand p {
+      margin: 4px 0 0;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    nav a {
+      margin-left: 18px;
+      text-decoration: none;
+      color: #0f172a;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #475569;
+    }
+
+    .hero {
+      background: #ffffff;
+      padding: 70px 24px 50px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .hero-content {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      max-width: 800px;
+      color: #475569;
+      font-size: 18px;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 24px;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 32px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-top: 0;
+      margin-bottom: 24px;
+    }
+
+    h3 {
+      margin-top: 32px;
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    p {
+      margin-bottom: 16px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .about-img {
+      width: 100%;
+      border-radius: 14px;
+      margin: 24px 0;
+      display: block;
+    }
+
+    .contact-line {
+      color: #475569;
+      font-size: 16px;
+      margin-top: -10px;
+      margin-bottom: 24px;
+    }
+
+    .job, .edu {
+      margin-bottom: 28px;
+    }
+
+    .job-title, .edu-title {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .date {
+      color: #64748b;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+
+      nav {
+        margin-top: 12px;
+        width: 100%;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 8px 12px 0 0;
+      }
+    }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Ralph Mina</h1>
-  <p>Mechanical Engineering Portfolio</p>
-</header>
+  <header>
+    <div class="nav-container">
+      <div class="brand">
+        <h1>Ralph Mina</h1>
+        <p>Personal E-Portfolio</p>
+      </div>
+      <nav>
+        <a href="#about">About Me</a>
+        <a href="#cv">Curriculum Vitae</a>
+        <a href="#reflection">Placement Reflection</a>
+        <a href="#cover-letter">Cover Letter</a>
+      </nav>
+    </div>
+  </header>
 
-<section>
-  <h2>About Me</h2>
-  <img src="f1.jpg">
-  <p>I am a last year Mechanical Engineering student at UTS. My interest in Mechanical Engineering was first sparked by Formula 1...</p>
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Mechanical Engineering Student with Industry Experience</h2>
+      <p>
+        Welcome to my personal e-portfolio. This website presents my background, experience,
+        reflection, and professional communication as I prepare to begin my career in mechanical engineering.
+      </p>
+    </div>
+  </section>
 
-  <img src="cad.png">
-</section>
+  <section id="about">
+    <div class="card">
+      <h2>About Me</h2>
 
-<section>
-  <h2>Curriculum Vitae</h2>
-  <p><strong>Final-year Mechanical Engineering student...</strong></p>
-</section>
+      <img src="f1.jpg" alt="Formula 1 inspiration" class="about-img" />
 
-<section>
-  <h2>Placement Reflection</h2>
-  <p>Before beginning my 12-week internship...</p>
-</section>
+      <p>
+        I am a last year Mechanical Engineering student at UTS. My interest in Mechanical Engineering was first sparked by Formula 1, a world where precision, performance, and innovation operate at the highest level. I was drawn to the way engineering decisions directly influence speed, efficiency, and reliability. That fascination developed into a deeper interest in how complex mechanical systems are designed, analysed, and refined to perform under demanding conditions.
+      </p>
 
-<section>
-  <h2>Cover Letter</h2>
-  <p>Dear Hiring Manager, I am writing to apply...</p>
-</section>
+      <p>
+        For me, engineering is about optimising performance while maintaining safety, functionality, and efficiency.
+      </p>
+
+      <p>
+        During my studies and industry placement, I have applied this mindset in practical environments, working with AutoCAD to develop construction and architectural plans across mechanical, electrical, and fire services systems. This experience has strengthened my technical drafting skills, attention to detail, and understanding of how engineering designs translate into real-world infrastructure.
+      </p>
+
+      <p>
+        As I continue developing as a mechanical engineer, I aim to build a career focused on high-performance systems and intelligent design, combining analytical thinking with practical application.
+      </p>
+
+      <img src="cad.png" alt="CAD drawing work" class="about-img" />
+    </div>
+  </section>
+
+  <section id="cv">
+    <div class="card">
+      <h2>Curriculum Vitae</h2>
+      <h3>Ralph Mina</h3>
+      <p class="contact-line">
+        Sydney, NSW 2212 | 0422 665 430 | ralphmina777@gmail.com
+      </p>
+
+      <h3>Career Objective</h3>
+      <p>
+        Final-year Mechanical Engineering student with over 2.5 years of full-time experience in the construction industry and a 12-week engineering placement focused on AutoCAD drafting for mechanical, electrical, and fire services systems. Experienced in working across multidisciplinary teams and translating technical designs into practical, buildable solutions. Seeking a graduate mechanical engineering role where I can apply my industry experience, technical design skills, and analytical knowledge to contribute to efficient, high-performance engineering projects while continuing to grow professionally.
+      </p>
+
+      <h3>Education</h3>
+
+      <div class="edu">
+        <div class="edu-title">Bachelor of Engineering (Honours) – Mechanical Engineering</div>
+        <div class="date">February 2024 – Present</div>
+        <p>University of Technology Sydney, Ultimo NSW</p>
+      </div>
+
+      <div class="edu">
+        <div class="edu-title">Bachelor of Engineering (Honours) – Mechanical Engineering</div>
+        <div class="date">August 2021 – July 2023</div>
+        <p>Holy Spirit University of Kaslik (USEK), Lebanon</p>
+      </div>
+
+      <ul>
+        <li>1st place in Lebanon Diploma for the Maths competition “Course aux nombres” Year 6 (2014–2015)</li>
+        <li>Year 12 Lebanese Baccalaureate Diploma in General Science (equivalent to HSC), July 2021 Lebanon</li>
+        <li>Multilingual: fluent in speaking, writing and reading English, Arabic and French</li>
+      </ul>
+
+      <h3>Work Experience</h3>
+
+      <div class="job">
+        <div class="job-title">Dogmen (Crane Supervisor) – CSB Group Sydney</div>
+        <div class="date">August 2023 – Present</div>
+        <ul>
+          <li>Work Health and Safety General Construction (White Card), NSW</li>
+          <li>National Licence to Perform High Risk Work for Dogging (DG), NSW</li>
+          <li>Work Safely Near Live Electrical Apparatus (National Course)</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-title">Mechanical Engineering Intern – Viscona</div>
+        <div class="date">October 2025 – Present</div>
+        <ul>
+          <li>Produced and modified detailed AutoCAD drawings for mechanical, electrical, and fire services systems in commercial construction projects.</li>
+          <li>Assisted in the preparation of construction documentation and coordinated layouts in accordance with project specifications and industry standards.</li>
+          <li>Collaborated with engineers, architects, and site teams to ensure accurate integration of building services within architectural plans.</li>
+          <li>Reviewed technical drawings to identify clashes and inconsistencies, contributing to improved design accuracy and reduced on-site errors.</li>
+          <li>Gained practical understanding of HVAC systems, fire protection services, and building services coordination.</li>
+          <li>Applied engineering principles to support design decisions and ensure compliance with safety and regulatory requirements.</li>
+          <li>Managed multiple drawing revisions under tight deadlines, demonstrating strong time management and attention to detail.</li>
+        </ul>
+      </div>
+
+      <h3>Transferable Skills</h3>
+      <p>
+        <strong>Leadership:</strong> I am leading a group of people at work every day on construction job sites. I was also the group leader of many projects throughout university and school.
+      </p>
+      <p>
+        <strong>Teamwork:</strong> My team projects result at work and at university have always been satisfying. For example, at university, we worked on the Engineers Without Borders Challenge where I had a big positive impact on my team.
+      </p>
+
+      <h3>Referees</h3>
+      <p>Available on request.</p>
+    </div>
+  </section>
+
+  <section id="reflection">
+    <div class="card">
+      <h2>Placement Reflection</h2>
+
+      <p>
+        Before beginning my 12-week internship, I expected to apply the theoretical knowledge from my mechanical engineering degree directly to complex design calculations and advanced engineering analysis. I anticipated being heavily involved in technical problem-solving tasks like university projects, such as system modelling or performance optimisation. Given my prior construction experience, I also expected to feel confident navigating the site environment and understanding project workflows.
+      </p>
+
+      <p>
+        The reality of the internship was both different and more valuable than I had imagined. Rather than focusing purely on calculations, I quickly realised that professional engineering work requires precision, coordination, and clear communication across multiple disciplines. Working primarily with AutoCAD on mechanical, electrical, and fire services drawings, I gained firsthand insight into how engineering designs must integrate seamlessly within architectural constraints and real-world construction conditions. I observed how even minor drafting errors could create costly site delays, reinforcing the importance of attention to detail and accountability. The experience highlighted that engineering is not just about technical knowledge, but about producing clear, buildable, and coordinated documentation.
+      </p>
+
+      <p>
+        One of the most important lessons from my internship was the significance of multidisciplinary collaboration. Mechanical systems do not exist in isolation; they must align with structural, electrical, and architectural components. Seeing how coordination meetings and drawing revisions shaped the final design strengthened my understanding of systems thinking. Another key lesson was the importance of professional communication. Whether clarifying drawing changes or responding to design adjustments, effective communication ensured that project progress remained smooth and efficient. These lessons were important because they shifted my perspective from thinking like a student solving isolated problems to thinking like an engineer contributing to a larger project ecosystem.
+      </p>
+
+      <p>
+        This internship has significantly shaped my professional identity. I now see myself not only as a future mechanical engineer focused on performance and design, but also as a practical problem-solver who understands the realities of construction and implementation. My prior 2.5 years of construction experience allowed me to approach tasks with an awareness of site conditions, safety considerations, and workflow efficiency. Combined with my technical training, this gives me a balanced perspective between design intent and real-world execution.
+      </p>
+
+      <p>
+        After this workplace experience, my value proposition to an employer lies in my ability to bridge theory and practice. I bring hands-on construction experience, technical drafting capability, and an understanding of multidisciplinary coordination. I can contribute effectively to team environments, produce accurate and buildable documentation, and adapt quickly within dynamic project settings. Most importantly, I understand that engineering excellence is not only measured by innovation, but by precision, reliability, and collaboration.
+      </p>
+    </div>
+  </section>
+
+  <section id="cover-letter">
+    <div class="card">
+      <h2>Cover Letter</h2>
+      <h3>Graduate Engineering Application</h3>
+
+      <p>Dear Hiring Manager,</p>
+
+      <p>
+        I am writing to apply for the Graduate Engineering Program at Industrus Engineering. As a final-year Mechanical Engineering student, I am eager to apply my technical knowledge and practical experience in a professional consulting environment. My internship experience, combined with my strong analytical and communication skills, has prepared me to contribute effectively to innovative engineering projects while maintaining high professional standards.
+      </p>
+
+      <p>
+        <strong>Commitment to ethical conduct and professional accountability:</strong> During my internship, I was responsible for assisting with building plan documentation and ensuring compliance with safety and regulatory requirements. I prepared accurate AutoCAD drawings and documentation that could be used by multiple teams to assess building compliance and safety considerations. I ensured all documentation followed company standards and engineering guidelines, while carefully checking measurements, layout accuracy, and compliance requirements before submitting drawings for review.
+      </p>
+
+      <p>
+        <strong>Demonstrated ability to communicate effectively with engineers and stakeholders:</strong> During my internship, I worked with engineers and professionals from different disciplines involved in construction planning and project coordination. I clearly communicated technical information and documentation by explaining drawing details, discussing layout changes, and responding to feedback from engineers and project staff.
+      </p>
+
+      <p>
+        <strong>Ability to engage in a creative, innovative, and proactive environment:</strong> While working on engineering drawings and documentation, I encountered situations where design plans needed adjustments to better align with real-world site conditions. I proactively reviewed design plans, identified potential issues, and suggested improvements where necessary to support practical and workable solutions.
+      </p>
+
+      <p>
+        <strong>Demonstrated ability to use and manage information:</strong> My internship involved handling technical drawings, project documentation, and engineering information used by multiple project teams. I used AutoCAD and documentation tools to create structured and well-organised building plans and records, ensuring files were clearly labelled and maintained for easy access and updates.
+      </p>
+
+      <p>
+        <strong>Ability to manage personal performance in a professional environment:</strong> During my internship, I managed tasks independently while meeting deadlines within project timelines. I organised my workload, prioritised responsibilities, and regularly reviewed progress while also seeking feedback from supervisors to continuously improve my work.
+      </p>
+
+      <p>
+        <strong>Ability to work in a team and demonstrate leadership when required:</strong> Many of the projects I worked on required collaboration between engineers, planners, and construction teams. I actively participated in team discussions, shared technical insights, supported colleagues when resolving design issues, and ensured my work aligned with the needs of the broader project team.
+      </p>
+
+      <p>
+        I would welcome the opportunity to further discuss how my academic background, technical skills, and internship experience align with the Industrus Engineering Graduate Program. I can be contacted via email or phone at your convenience. I have attached my resume and would be pleased to provide any further information if required.
+      </p>
+
+      <p>Thank you for your time and consideration.</p>
+      <p>Kind regards,<br>Ralph Mina</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Ralph Mina | Personal E-Portfolio
+  </footer>
 
 </body>
 </html>
